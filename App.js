@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import Card from './src/Card';
-import Anim from './src/Anim';
+import useAnimation from './src/useAnimation';
 
 const DATA = [
   { id: 1, text: 'Card #1', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-04.jpg' },
@@ -16,9 +16,12 @@ const DATA = [
 
 
 export default function App() {
+
+  const Animatedname = useAnimation("yahya",10,0,200,300)
+
   return (
     <View style={styles.container}>
-<Anim />
+{Animatedname}
     </View>
   );
 }

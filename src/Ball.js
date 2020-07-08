@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View , Animated} from 'react-native';
 
-export default function Ball(yahya) {
+export default function Ball() {
     var position = new Animated.ValueXY(0,0);
 
     useEffect(() => {

@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { View , Animated, Text} from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { Animated, Text} from 'react-native';
 
-export default Anim = () => {
-    var position = new Animated.ValueXY(0,0);
+export default usePluse = () => {
+    const position = useRef(new Animated.ValueXY(0,0)).current;
 
-    useEffect(() => {
-        Animated.spring(position, {
-          toValue: { x:200, y:400},
-          useNativeDriver: false
-        }).start();
-      }, []);
+const pluse = () => {
+  useEffect(() => {
+    Animated.spring(position, {toValue: { x:200, y:400},useNativeDriver: false}).start(() => pluse());
+  }, []);
+}
 
-return (
-    <Animated.View style={position.getLayout()}>
-      <Text style={styles.name}>gd</Text>
-    </Animated.View>
-  );
+return position;
 
 }
+
+
 
 const styles = {
     ball: {
