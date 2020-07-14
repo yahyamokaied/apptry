@@ -3,9 +3,9 @@ import { View, Animated} from 'react-native';
 
 
 
-const useTextTyping = (arr) => {
+const useTextTyping = (stringText,showTime,hideTime) => {
     var animatedValues = [];
-    var res = arr.split(" ");
+    var res = stringText.split(" ");
     res.forEach((_,i) => {
         animatedValues[i] = new Animated.Value(0);
     })
@@ -14,7 +14,7 @@ const animated = (toValue = 1) => {
     const animations = res.map((_,i) => {
     return Animated.timing(animatedValues[i], {
         toValue,
-        duration: 500,
+        duration: showTime,
         useNativeDriver: true
        });
         });
@@ -23,11 +23,10 @@ Animated.stagger(
     100,
     toValue === 0 ? animations.reverse() : animations
     ).start( () => {
-    setTimeout(() => animated(toValue === 0 ? 1 : 0), 1000);
+    setTimeout(() => animated(toValue === 0 ? 1 : 0), hideTime);
 });
 };
 
-  //const position = new Animated.ValueXY({ x: initX, y: initY });
 
     useEffect(() => {
         animated();

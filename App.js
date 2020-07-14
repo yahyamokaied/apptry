@@ -1,15 +1,24 @@
 import React from 'react';
 import { StyleSheet, View, Text, useState } from 'react-native';
+
 import Card from './src/Card';
 import useAnimationView from './src/useAnimationView';
 import * as AppStyle from './AppStyle';
 import AppWidth from './AppWidth';
 import useTextTyping from './src/useTextTyping';
+import useColorMaskedText from './src/useColorMaskedText';
+import useGradientMaskedText from './src/useGradientMaskedText';
+
+
+
 
 
 export default function App() {
 
-  const TextTyping = useTextTyping("How are you doing today my friend lovely boy so much I like your self? How are you doing today my friend lovely boy so much I like your self")
+  const hh = useColorMaskedText("YAHYA MOKAIED", 44);
+  const gg = useGradientMaskedText("YAHYA MOKAIED", 44,'#00ff00','#0000ff');
+
+  const TextTyping = useTextTyping("Yahya Mokaied",500,1000);
 
   //const StartButton = AppStyle.useAppButton("Start","pressed Start")
  // const GoButton = AppStyle.useAppButton("Go","pressed Go")
@@ -23,7 +32,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-{TextTyping}
+{gg}{gg}{gg}
     </View>
   );
 }
