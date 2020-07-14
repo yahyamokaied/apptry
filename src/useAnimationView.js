@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 import { Text, Animated} from 'react-native';
 
+/*
+import useAnimationView from './src/useAnimationView';
+//       name            func name      
+const Animatedname = useAnimationView(ExitButton,0,0,100,100)
+{Animatedname}
+*/
 
-
-const useAnimation = (name,initX,initY,newX,newY) => {
+const useAnimationView = (name,initX,initY,newX,newY) => {
 
   const position = new Animated.ValueXY({ x: initX, y: initY });
 
@@ -17,7 +22,7 @@ const useAnimation = (name,initX,initY,newX,newY) => {
 
     return (
         <Animated.View style={position.getLayout()}>
-          <Text style={styles.name}>{name}</Text>
+          {name}
       </Animated.View>
       );
 };
@@ -30,4 +35,4 @@ color: 'red'
 };
 
 
-export default useAnimation;
+export default useAnimationView;

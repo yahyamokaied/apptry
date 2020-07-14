@@ -1,27 +1,29 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, useState } from 'react-native';
 import Card from './src/Card';
-import useAnimation from './src/useAnimation';
-
-const DATA = [
-  { id: 1, text: 'Card #1', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-04.jpg' },
-  { id: 2, text: 'Card #2', uri: 'http://www.fluxdigital.co/wp-content/uploads/2015/04/Unsplash.jpg' },
-  { id: 3, text: 'Card #3', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-09.jpg' },
-  { id: 4, text: 'Card #4', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-01.jpg' },
-  { id: 5, text: 'Card #5', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-04.jpg' },
-  { id: 6, text: 'Card #6', uri: 'http://www.fluxdigital.co/wp-content/uploads/2015/04/Unsplash.jpg' },
-  { id: 7, text: 'Card #7', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-09.jpg' },
-  { id: 8, text: 'Card #8', uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-01.jpg' },
-];
+import useAnimationView from './src/useAnimationView';
+import * as AppStyle from './AppStyle';
+import AppWidth from './AppWidth';
+import useTextTyping from './src/useTextTyping';
 
 
 export default function App() {
 
-  const Animatedname = useAnimation("yahya",10,0,200,300)
+  const TextTyping = useTextTyping("How are you doing today my friend lovely boy so much I like your self? How are you doing today my friend lovely boy so much I like your self")
+
+  //const StartButton = AppStyle.useAppButton("Start","pressed Start")
+ // const GoButton = AppStyle.useAppButton("Go","pressed Go")
+  //const ExitButton = AppStyle.useAppButton("Exit","pressed Exit")
+  // const ExitText = AppStyle.useAppText("Exit")
+
+  //const Animatedname1 = useAnimationView(StartButton,0,50,300,50)
+  //const Animatedname2 = useAnimationView(GoButton,200,50,200,50)
+  //const Animatedname3 = useAnimationView(ExitButton,300,50,0,50)
+
 
   return (
     <View style={styles.container}>
-{Animatedname}
+{TextTyping}
     </View>
   );
 }
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
