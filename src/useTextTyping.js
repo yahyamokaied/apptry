@@ -3,7 +3,7 @@ import { View, Animated} from 'react-native';
 
 
 
-const useTextTyping = (stringText,showTime,hideTime) => {
+const useTextTyping = (stringText,stringText2,showTime,hideTime,txtColor) => {
     var animatedValues = [];
     var res = stringText.split(" ");
     res.forEach((_,i) => {
@@ -38,7 +38,7 @@ Animated.stagger(
               return (<Animated.Text
                 key={`${word}-${index}`}
                 style={[styles.name,
-                {opacity: animatedValues[index],
+                {color: txtColor, opacity: animatedValues[index],
                 transform: [
                     {
                         translateX: Animated.multiply(
@@ -67,7 +67,6 @@ const styles = {
     },
 name: {
 fontSize : 20,
-color: 'red'
     }
 };
 

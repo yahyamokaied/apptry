@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, Animated} from 'react-native';
+import {Animated} from 'react-native';
 
 /*
 import useAnimationView from './src/useAnimationView';
