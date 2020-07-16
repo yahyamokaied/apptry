@@ -1,6 +1,6 @@
 import React from 'react';
 import MaskedView from '@react-native-community/masked-view';
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image, requireNativeComponent} from 'react-native';
 
 
 const usePhotoMaskedText = (txt, txtSize, imgUrl) => {

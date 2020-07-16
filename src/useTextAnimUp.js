@@ -8,7 +8,7 @@ const useTextAnimUp = (txt,txtSize,txtHight) => {
   const position = new Animated.ValueXY({ x:0, y:height });
 
     useEffect(() => {
-        Animated.spring(position, {toValue: { x:0, y:txtHight},useNativeDriver: false, speed:0.1}).start();
+        Animated.spring(position, {toValue: { x:0, y:txtHight},useNativeDriver: false, speed:1}).start();
       }, []);
 
     return (

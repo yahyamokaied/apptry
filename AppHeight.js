@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react';
 import {Dimensions} from 'react-native';
 
-const {width} = Dimensions.get('window');
+const {height} = Dimensions.get('window');
 
-const AppWidth = () => {
-  const [realWidth, setRealWidth] = useState(width);
+const AppHeight = () => {
+  const [realHeight, setRealHeight] = useState(height);
 
      useEffect(() => {
        Dimensions.addEventListener('change', ({window}) => {
-        setRealWidth(window.width);
+        setRealHeight(window.height);
       });
        return () => {
          Dimensions.removeEventListener('change');
        };
      });
 
-return realWidth;
+return realHeight;
     };
 
-    export default AppWidth;
+    export default AppHeight;
