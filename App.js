@@ -3,13 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 
 //import HomeScreen from './screens/HomeScreen';
 import MoveAndRotate from './src/MoveAndRotate';
+import FetchMyGit from './src/FetchMyGit';
 
 
 export default function App() {
 
   return (
     <View  style={styles.container}>
-      <MoveAndRotate />
+      <FetchMyGit />
+{/* <MoveAndRotate /> */}
 {/* <HomeScreen /> */}
     </View>
   );
