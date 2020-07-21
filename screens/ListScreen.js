@@ -1,7 +1,7 @@
-import React,{useEffect} from "react";
-import { FlatList, StyleSheet,View,Text,ActivityIndicator,Button } from "react-native";
+import React, { useEffect } from "react";
+import { FlatList, StyleSheet, View, Text, ActivityIndicator, Button } from "react-native";
 
-import useApi from "./useApi";
+import useApi from "../api/useApi";
 import listingsApi from "../api/listings";
 
 function ListScreen() {
@@ -11,14 +11,13 @@ function ListScreen() {
         getListingsApi.request();
       }, []);
 
-
   return (
    <View style={styles.screen}>
       {getListingsApi.error && (
         <>
-          <Text>Couldn't retrieve the listings.</Text>
+          <Text>Couldn't fetch data from server.</Text>
           <Text>{getListingsApi.error}</Text>
-          <Button title="Retry" onPress={getListingsApi.request} />
+          <Button title="Try Again" onPress={getListingsApi.request} />
         </>
       )}
       <ActivityIndicator animating={getListingsApi.loading} />
@@ -37,10 +36,11 @@ function ListScreen() {
 
 const styles = StyleSheet.create({
   screen: {
-    padding: 20,
     justifyContent: 'center',
-    alignItems:'center'
-    ,flex:1
+    alignItems:'center',
+    height: 400,
+    width:250,
+    padding: 20,
   },
 });
 

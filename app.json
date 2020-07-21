@@ -2,13 +2,14 @@
   "expo": {
     "name": "yahya",
     "slug": "yahya",
+    "privacy":"unlisted",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,7 +18,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yahyamokaied.yahya",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.yahyamokaied.yahya"
     },
     "web": {
       "favicon": "./assets/favicon.png"

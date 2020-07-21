@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native';
 
 import { scale, w, h, realWidth, realHeight} from '../AppDimentions';
 
-import useTextTyping from '../src/useTextTyping';
-import useAnimLeft from '../src/useAnimLeft';
-import useAnimRight from '../src/useAnimRight';
-import useTextAnimUp from '../src/useTextAnimUp';
+import useTextTyping from '../animation/useTextTyping';
+import useAnimLeft from '../animation/useAnimLeft';
+import useAnimRight from '../animation/useAnimRight';
+import useTextAnimUp from '../animation/useTextAnimUp';
 
 const HomeScreen = () => {
 
@@ -37,7 +37,6 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
       alignItems: 'center',
-      backgroundColor:'#ededed',
       width:realWidth,
       height:realHeight,
     },
