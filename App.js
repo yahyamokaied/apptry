@@ -8,15 +8,23 @@ import LeftDrawer from './navigation/LeftDrawer';
 
 import Connection from './setting/Connection';
 
+import { Provider } from 'react-redux'
+import store from './redux/store';
+
 export default function App() {
 
   return (
+    <Provider store={store}>
+
     <View  style={styles.container}>
       <NavigationContainer>
       <LeftDrawer/>
       </NavigationContainer>
       <Connection/>
     </View>
+
+    </Provider>
+
   );
 }
 

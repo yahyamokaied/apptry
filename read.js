@@ -11,6 +11,8 @@ npm install react-native-paper
 internet connection status :
 npm install --save @react-native-community/netinfo
 
+firebase / database :
+npm install --save @react-native-firebase/app
 
     "ios": {
       "supportsTablet": true,
