@@ -4,6 +4,7 @@
 
 export const ADD_ACTION = 'ADD_ACTION'
 export const REMOVE_ACTION = 'REMOVE_ACTION'
+export const RESET_ACTION = 'RESET_ACTION'
 
 
 /*
@@ -23,6 +24,12 @@ export const removeAction = id => {
   return{
     type: REMOVE_ACTION,
     id: id
+  }
+}
+
+export const resetAction = () => {
+  return{
+    type: RESET_ACTION,
   }
 }
 

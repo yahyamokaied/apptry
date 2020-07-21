@@ -9,7 +9,7 @@ import useAnimRight from '../animation/useAnimRight';
 import useTextAnimUp from '../animation/useTextAnimUp';
 
 import {useSelector, useDispatch} from 'react-redux';
-import {addTodo,toggleTodo, addAction, removeAction} from '../redux/actions';
+import {resetAction, addAction, removeAction} from '../redux/actions';
 
 
 
@@ -27,7 +27,7 @@ const HomeScreen = () => {
 
 
   useEffect(() => {
-    console.log(`You clicked $[allActivities]} times`,allMeals)
+    console.log("You clicked :"+allMeals)
   }, [allMeals]);
 
 
@@ -44,11 +44,14 @@ const HomeScreen = () => {
           <View  style={styles.main3}>
               {description}
               </View>
-        <TouchableOpacity onPress={() => dispatch(addAction('hi'))}>
+        <TouchableOpacity onPress={() => {dispatch(addAction('hi'))}}>
         <Text style={styles.title}>Add Meal</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => dispatch(removeAction(4))}>
+        <TouchableOpacity onPress={() => {dispatch(removeAction(4))}}>
         <Text style={styles.title}>Remove Meal</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {dispatch(resetAction())}}>
+        <Text style={styles.title}>Reset</Text>
         </TouchableOpacity>
 
               </View>

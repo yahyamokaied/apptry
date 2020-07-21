@@ -20,6 +20,8 @@ const mealsReducer = (state = MEALS, action) => {
           ]
         case 'REMOVE_ACTION':
             return state.filter((allMeals, i) => i !== action.id);
+        case 'RESET_ACTION':
+            return state=MEALS;
         default:
           return state
       }
