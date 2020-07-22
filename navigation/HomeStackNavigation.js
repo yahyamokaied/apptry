@@ -3,8 +3,9 @@ import { Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/HomeScreen';
+import LogInScreen from '../screens/LogInScreen';
 import ListScreen from '../screens/ListScreen';
+
 
 const HomeStack = createStackNavigator();
 
@@ -41,7 +42,7 @@ export default HomeStackNavigation = ({navigation,route}) => {
         )
         }}>
 
-        <HomeStack.Screen name="Home" component={HomeScreen}/>
+        <HomeStack.Screen name="Login" component={LogInScreen}/>
         <HomeStack.Screen name="List" component={ListScreen}/>
 
     </HomeStack.Navigator>

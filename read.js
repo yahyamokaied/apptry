@@ -8,11 +8,27 @@ npm install @react-navigation/drawer
 UX :
 npm install react-native-paper
 
+form :
+npm install formik
+
+validate form :
+npm i yup
+
+
+
 internet connection status :
 npm install --save @react-native-community/netinfo
 
+redux / state management :
+npm i redux react-redux
+
+
 firebase / database :
 npm install --save @react-native-firebase/app
+
+
+
+
 
     "ios": {
       "supportsTablet": true,
